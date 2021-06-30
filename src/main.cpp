@@ -83,15 +83,13 @@ while (client.connected()) {
       client.print("Content-type: text/html; charset=utf-8\r\n");
       client.print("Connection: close\r\n");
       client.print("\r\n");
-      client.println("<html>");
-      client.print("<p>W domu: ");
-      client.print(insideTemp);
-      client.println("°C</p>");
-      client.print("<p>W ogródku: ");
+      client.print("<html><script>var outsideTemperature =");
       client.print(outsideTemp);
-      client.println("°C</p>");
-      client.println("</html>");
-      client.print("\r\n");
+      client.print(";var insideTemperature = ");
+      client.print(insideTemp);
+      client.print(";</script><script ></script></html>");
+      client.println();
+      client.println();
     }
 
     // close the connection:
