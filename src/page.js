@@ -1,5 +1,54 @@
 
-let = template = `<div class="text-inside temperature">`+ insideTemperature + `°C</div>
+let = template = `
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(74, 174, 255);
+    }
+
+    .sun {
+        margin: 0;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .house {
+        width: 600px;
+        height: 300px;
+
+        margin: 200px auto;
+    }
+
+    .text-outside {
+        left: 60px;
+    }
+
+    .text-inside {
+        color: white;
+        left: 0;
+        text-align: center;
+        width: 100%
+    }
+
+    .temperature {
+        position: absolute;
+        text-align: center;
+        top: 350px;
+        font-family: Arial;
+        font-size: 50px;
+        font-weight: bold;
+    }
+</style>
+
+
+<div class="text-inside temperature">`+ insideTemperature + `°C</div>
 <div class="text-outside temperature">` + outsideTemperature + `°C</div>
 <svg class="sun" viewBox="0 0 104 103" version="1.1" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"

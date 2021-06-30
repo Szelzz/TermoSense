@@ -87,7 +87,7 @@ while (client.connected()) {
       client.print(outsideTemp);
       client.print(";var insideTemperature = ");
       client.print(insideTemp);
-      client.print(";</script><script ></script></html>");
+      client.print(";</script><script src='https://szelzz.github.io/TermoSense/src/page.js'></script></html>");
       client.println();
       client.println();
     }
